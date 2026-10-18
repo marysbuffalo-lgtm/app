@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-q04+EYI/jYQaqUswctQdBxnew0i9yamcukt3dezR2fs='; style-src 'sha256-qfWZa0YIuFOtAF8SF7FVUaDVgPMwXlzcofpN+YQ9szs='; img-src data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-zon+vCRu3YFnvr75EqAgO1tIxhjeaFEsYJxiVBE4DSs='; style-src 'sha256-qfWZa0YIuFOtAF8SF7FVUaDVgPMwXlzcofpN+YQ9szs='; img-src data:; base-uri 'none'; form-action 'none'">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#e21959">
 <meta name="color-scheme" content="light">
@@ -12,12 +12,13 @@
 <script>(function () {
   document.documentElement.className = "js";
   var website = "https://daytoday.ae/";
-  var stores = {
-    ios: { url: "https://apps.apple.com/ae/app/day-to-day-online/id6504225370", name: "the App Store" },
-    android: { url: "https://play.google.com/store/apps/details?id=com.daytodayonline", name: "Google Play" }
-  };
-  var storageKey = "dtd-routed-at";
-  var rememberFor = 30 * 60 * 1000;
+  var appStore = "https://apps.apple.com/ae/app/day-to-day-online/id6504225370";
+  var playStore = "https://play.google.com/store/apps/details?id=com.daytodayonline";
+  var playIntent = "intent://details?id=com.daytodayonline#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=" + encodeURIComponent(playStore) + ";end";
+
+  try {
+    localStorage.removeItem("dtd-routed-at");
+  } catch (e) {}
 
   function detectPlatform() {
     var ua = navigator.userAgent || "";
@@ -28,48 +29,98 @@
     return "desktop";
   }
 
+  function supportsIntents() {
+    var ua = navigator.userAgent || "";
+    return /chrome\/\d/i.test(ua) && !/firefox|fxios|opera mini|; wv\)/i.test(ua);
+  }
+
+  var platform = detectPlatform();
+  var store = null;
+
+  if (platform === "ios") {
+    store = { url: appStore, name: "the App Store" };
+  } else if (platform === "android") {
+    store = { url: supportsIntents() ? playIntent : playStore, name: "Google Play" };
+  }
+
+  if (!store) {
+    location.replace(website);
+    return;
+  }
+
+  var routed = false;
+  var leaving = false;
+  var returnTimer = null;
+  var fallbackTimer = null;
+  var openedAt = 0;
+
+  function isRouted() {
+    if (routed) return true;
+    try {
+      return !!(history.state && history.state.dtdRouted);
+    } catch (e) {
+      return false;
+    }
+  }
+
   function markRouted() {
+    routed = true;
     try {
       history.replaceState({ dtdRouted: true }, document.title);
     } catch (e) {}
-    try {
-      localStorage.setItem(storageKey, String(Date.now()));
-    } catch (e) {}
   }
 
-  function wasRouted() {
+  function openStore() {
+    markRouted();
+    openedAt = Date.now();
+    location.href = store.url;
+    if (store.url === playIntent) {
+      clearTimeout(fallbackTimer);
+      fallbackTimer = setTimeout(function () {
+        if (!leaving && document.visibilityState === "visible") location.href = playStore;
+      }, 2000);
+    }
+  }
+
+  function goToWebsite() {
+    if (!leaving) location.replace(website);
+  }
+
+  function cameBack() {
     try {
-      if (history.state && history.state.dtdRouted) return true;
-    } catch (e) {}
-    try {
-      var at = parseInt(localStorage.getItem(storageKey), 10);
-      if (at && Date.now() - at >= 0 && Date.now() - at < rememberFor) return true;
+      var entry = performance.getEntriesByType("navigation")[0];
+      if (entry && entry.type) return entry.type === "back_forward";
+      if (performance.navigation) return performance.navigation.type === 2;
     } catch (e) {}
     return false;
   }
 
-  function goToWebsite() {
-    location.replace(website);
-  }
-
-  var store = stores[detectPlatform()];
-
-  if (!store || wasRouted()) {
+  if (cameBack() && isRouted()) {
     goToWebsite();
     return;
   }
 
-  var leftPage = false;
+  window.addEventListener("beforeunload", function () {
+    if (Date.now() - openedAt < 1000) return;
+    leaving = true;
+    clearTimeout(returnTimer);
+    clearTimeout(fallbackTimer);
+  });
 
   window.addEventListener("pageshow", function (event) {
-    if (event.persisted && wasRouted()) goToWebsite();
+    if (event.persisted) {
+      leaving = false;
+      if (isRouted()) goToWebsite();
+    }
   });
 
   document.addEventListener("visibilitychange", function () {
+    clearTimeout(returnTimer);
     if (document.visibilityState === "hidden") {
-      leftPage = true;
-    } else if (leftPage && wasRouted()) {
-      goToWebsite();
+      clearTimeout(fallbackTimer);
+    } else if (isRouted()) {
+      leaving = false;
+      returnTimer = setTimeout(goToWebsite, 600);
     }
   });
 
@@ -79,14 +130,14 @@
     if (status) status.textContent = "Opening " + store.name;
     if (button) {
       button.href = store.url;
-      button.addEventListener("click", markRouted);
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        openStore();
+      });
     }
   });
 
-  window.onload = function () {
-    markRouted();
-    location.href = store.url;
-  };
+  window.onload = openStore;
 })();</script>
 <style>*,*::before,*::after{box-sizing:border-box}
 html,body{height:100%;margin:0}
