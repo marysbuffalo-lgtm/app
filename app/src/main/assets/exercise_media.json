@@ -1,0 +1,229 @@
+{
+  "arm_swings": {
+    "gif": "arm_swings.gif",
+    "form_cue": "Swing the arms across the chest, then open wide. Relaxed shoulders.",
+    "muscles": "Shoulders, chest"
+  },
+  "torso_rotations": {
+    "gif": "torso_rotations.gif",
+    "form_cue": "Hips stay mostly square. Turn the ribs, smooth and controlled.",
+    "muscles": "Trunk, hips"
+  },
+  "high_knee_marches": {
+    "gif": "high_knee_marches.gif",
+    "form_cue": "Brace the core, stand tall, lift each knee to hip height.",
+    "muscles": "Hips, core"
+  },
+  "half_squats": {
+    "gif": "half_squats.gif",
+    "form_cue": "Sit back about halfway, knees track over toes, 2 second pace.",
+    "muscles": "Quads, glutes"
+  },
+  "low_impact_hops": {
+    "gif": "low_impact_hops.gif",
+    "form_cue": "Feet barely leave the floor. Soft landings on the balls of the feet.",
+    "muscles": "Calves, ankles"
+  },
+  "march_in_place": {
+    "gif": "march_in_place.gif",
+    "form_cue": "Easy march, swing the arms, breathe steadily.",
+    "muscles": "Hips, calves"
+  },
+  "deep_squats": {
+    "gif": "deep_squats.gif",
+    "form_cue": "Only as deep as comfortable. Hold a wall or doorframe. 3 second pause, no bouncing. Skip if sharp knee pain.",
+    "muscles": "Hips, ankles"
+  },
+  "diaphragmatic_breathing": {
+    "gif": "diaphragmatic_breathing.gif",
+    "form_cue": "4 s in through the nose, belly expands. 6 s out through the mouth.",
+    "muscles": "Diaphragm"
+  },
+  "towel_pass_through": {
+    "gif": "towel_pass_through.gif",
+    "form_cue": "Hold the towel wide. Sweep it over and behind you. Stop if painful. This is not an overhead press.",
+    "muscles": "Shoulders, upper back"
+  },
+  "t_raise": {
+    "gif": "t_raise.gif",
+    "form_cue": "Lie face down, thumbs up, lift straight arms out to the sides. Squeeze the shoulder blades.",
+    "muscles": "Mid back, rear shoulders"
+  },
+  "bird_dog": {
+    "gif": "bird_dog.gif",
+    "form_cue": "Opposite arm and leg reach long. Hold 2 seconds. Keep the back flat like a table.",
+    "muscles": "Core, glutes, back"
+  },
+  "wall_angel": {
+    "gif": "wall_angel.gif",
+    "form_cue": "Head, upper back and hips touch the wall. Slide the arms up and down slowly.",
+    "muscles": "Upper back, shoulders"
+  },
+  "chin_tuck": {
+    "gif": "chin_tuck.gif",
+    "form_cue": "Head on the wall. Pull the chin straight back, no tilting. Hold 3 seconds.",
+    "muscles": "Deep neck flexors"
+  },
+  "dead_bug": {
+    "gif": "dead_bug.gif",
+    "form_cue": "Lower back stays pressed to the floor. Reach the opposite arm and leg away slowly.",
+    "muscles": "Deep core"
+  },
+  "ankle_rocks": {
+    "gif": "ankle_rocks.gif",
+    "form_cue": "Half kneel, knee drifts over the toes, heel stays down.",
+    "muscles": "Ankles"
+  },
+  "hip_hinge_drill": {
+    "gif": "hip_hinge_drill.gif",
+    "form_cue": "Push the hips back, flat back, soft knees. Stand by squeezing the glutes.",
+    "muscles": "Hamstrings, glutes"
+  },
+  "scapular_push_up": {
+    "gif": "scapular_push_up.gif",
+    "form_cue": "Arms straight. Let the chest sink between the shoulder blades, then push the floor away.",
+    "muscles": "Serratus, upper back"
+  },
+  "scapular_retraction": {
+    "gif": "scapular_retraction.gif",
+    "form_cue": "Hands on the wall. Squeeze the shoulder blades together for 2 seconds.",
+    "muscles": "Mid back"
+  },
+  "wall_push_up": {
+    "gif": "wall_push_up.gif",
+    "form_cue": "Hands on the wall at chest height, body straight, slow down and push away.",
+    "muscles": "Chest, triceps",
+    "alt_gif": "elevated_push_up.gif"
+  },
+  "tempo_squat": {
+    "gif": "tempo_squat.gif",
+    "form_cue": "Hold the dumbbells at the shoulders, elbows down. 4 seconds down, knees over toes, stand tall.",
+    "muscles": "Quads, glutes"
+  },
+  "bulgarian_split_squat": {
+    "gif": "bulgarian_split_squat.gif",
+    "form_cue": "Rear foot on a chair or sofa. Drop the back knee straight down, front heel stays down.",
+    "muscles": "Quads, glutes"
+  },
+  "single_leg_rdl": {
+    "gif": "single_leg_rdl.gif",
+    "form_cue": "Hinge on one leg, the free leg reaches back. Flat back, hips square.",
+    "muscles": "Hamstrings, glutes"
+  },
+  "slider_hamstring_curl": {
+    "gif": "slider_hamstring_curl.gif",
+    "form_cue": "Heels on the slider, hips up. Slide out slowly, curl back in.",
+    "muscles": "Hamstrings"
+  },
+  "calf_raise": {
+    "gif": "calf_raise.gif",
+    "form_cue": "Hold a wall for balance. Full rise, slow lower.",
+    "muscles": "Calves"
+  },
+  "plank": {
+    "gif": "plank.gif",
+    "form_cue": "Elbows under the shoulders, squeeze the glutes, ribs down.",
+    "muscles": "Core"
+  },
+  "romanian_deadlift": {
+    "gif": "romanian_deadlift.gif",
+    "form_cue": "Dumbbells slide down the thighs, hips back, flat back. 4 seconds down.",
+    "muscles": "Hamstrings, glutes"
+  },
+  "reverse_lunge": {
+    "gif": "reverse_lunge.gif",
+    "form_cue": "Step back, drop the back knee straight down, push through the front heel.",
+    "muscles": "Quads, glutes"
+  },
+  "glute_bridge": {
+    "gif": "glute_bridge.gif",
+    "form_cue": "Dumbbell on the hips, drive through the heels, squeeze 2 seconds at the top.",
+    "muscles": "Glutes"
+  },
+  "elevated_push_up": {
+    "gif": "elevated_push_up.gif",
+    "form_cue": "Hands on a sofa or table edge, body straight. 4 seconds down.",
+    "muscles": "Chest, triceps"
+  },
+  "floor_press": {
+    "gif": "floor_press.gif",
+    "form_cue": "Lie on the floor, elbows at 45 degrees, press up, upper arms touch the floor lightly.",
+    "muscles": "Chest, triceps"
+  },
+  "one_arm_row": {
+    "gif": "one_arm_row.gif",
+    "form_cue": "Hand and knee on a chair, flat back. Pull the dumbbell to the hip.",
+    "muscles": "Lats, mid back"
+  },
+  "lateral_raise": {
+    "gif": "lateral_raise.gif",
+    "form_cue": "Raise out to the sides to shoulder height only. Slight elbow bend.",
+    "muscles": "Side shoulders"
+  },
+  "biceps_curl": {
+    "gif": "biceps_curl.gif",
+    "form_cue": "Elbows pinned to the sides, palms up, slow lowering.",
+    "muscles": "Biceps"
+  },
+  "triceps_extension": {
+    "gif": "triceps_extension.gif",
+    "form_cue": "Lie down, upper arms still, bend at the elbows toward the forehead, extend.",
+    "muscles": "Triceps"
+  },
+  "bent_over_row": {
+    "gif": "bent_over_row.gif",
+    "form_cue": "Hinge forward, flat back, row both dumbbells to the ribs.",
+    "muscles": "Lats, mid back"
+  },
+  "reverse_fly": {
+    "gif": "reverse_fly.gif",
+    "form_cue": "Hinge forward, arms slightly bent, open out wide, squeeze the shoulder blades.",
+    "muscles": "Rear shoulders, upper back"
+  },
+  "close_grip_push_up": {
+    "gif": "close_grip_push_up.gif",
+    "form_cue": "Hands under the shoulders, elbows tucked, body straight. Hands on a sofa if needed.",
+    "muscles": "Triceps, chest"
+  },
+  "single_arm_floor_press": {
+    "gif": "single_arm_floor_press.gif",
+    "form_cue": "One dumbbell, other hand on the belly to stop twisting. Elbow at 45 degrees.",
+    "muscles": "Chest, triceps, core",
+    "alt_gif": "floor_press.gif"
+  },
+  "hammer_curl": {
+    "gif": "hammer_curl.gif",
+    "form_cue": "Palms face each other, elbows still, slow lowering.",
+    "muscles": "Biceps, forearms"
+  },
+  "plank_shoulder_taps": {
+    "gif": "plank_shoulder_taps.gif",
+    "form_cue": "High plank, feet wide, tap the opposite shoulder without rocking the hips.",
+    "muscles": "Core, shoulders"
+  },
+  "side_plank": {
+    "gif": "side_plank.gif",
+    "form_cue": "Elbow under the shoulder, body in one line. Knees down is fine.",
+    "muscles": "Obliques"
+  },
+  "hollow_hold": {
+    "gif": "hollow_hold.gif",
+    "form_cue": "Lower back pressed down, shoulders and legs up. Bend the knees to make it easier.",
+    "muscles": "Core"
+  },
+  "glute_bridge_march": {
+    "gif": "glute_bridge_march.gif",
+    "form_cue": "Hips stay high and level while the feet march.",
+    "muscles": "Glutes, core"
+  },
+  "split_squat": {
+    "gif": "split_squat.gif",
+    "form_cue": "Both feet on the floor, back knee drops straight down.",
+    "muscles": "Quads, glutes"
+  },
+  "push_up": {
+    "gif": "push_up.gif",
+    "form_cue": "Body straight, chest to a fist height off the floor. Knees or a sofa edge are fine.",
+    "muscles": "Chest, triceps"
+  }
+}
