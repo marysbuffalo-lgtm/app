@@ -1,0 +1,54 @@
+{
+ "uuid": "bedd1322-b348-b8cb-bb0e-dfe8743e50fe",
+ "archiveFile": "test_wiki_2026-01.zim",
+ "entries": [
+  {
+   "requested": "A/Photosynthesis",
+   "path": "A/Photosynthesis",
+   "title": "Photosynthesis",
+   "mime": "text/html",
+   "file": "A__Photosynthesis",
+   "redirect": false
+  },
+  {
+   "requested": "A/Cellular_respiration",
+   "path": "A/Cellular_respiration",
+   "title": "Cellular respiration",
+   "mime": "text/html",
+   "file": "A__Cellular_respiration",
+   "redirect": false
+  },
+  {
+   "requested": "A/Mitochondrion",
+   "path": "A/Mitochondrion",
+   "title": "Mitochondrion",
+   "mime": "text/html",
+   "file": "A__Mitochondrion",
+   "redirect": false
+  },
+  {
+   "requested": "A/Albert_Einstein",
+   "path": "A/Albert_Einstein",
+   "title": "Albert Einstein",
+   "mime": "text/html",
+   "file": "A__Albert_Einstein",
+   "redirect": false
+  },
+  {
+   "requested": "I/chloroplast_diagram.png",
+   "path": "I/chloroplast_diagram.png",
+   "title": "I/chloroplast_diagram.png",
+   "mime": "image/png",
+   "file": "I__chloroplast_diagram.png",
+   "redirect": false
+  },
+  {
+   "requested": "A/Photosynthesis_(plants)",
+   "path": "A/Photosynthesis",
+   "title": "Photosynthesis (plants)",
+   "mime": "text/html",
+   "file": "A__Photosynthesis_plants",
+   "redirect": true
+  }
+ ]
+}
